@@ -1,7 +1,7 @@
 from django.contrib import admin
 # Add the include function to the import
 from django.urls import path, include
-from .views import Home, DuckList, DuckDetail, FeedingListCreate, FeedingDetail, PondList, PondDetail, AddPondToDuck #additional imports
+from .views import Home, DuckList, DuckDetail, FeedingListCreate, FeedingDetail, PondList, PondDetail, AddPondToDuck,CreateUserView, LoginView, VerifyUserView #additional imports
 
 urlpatterns = [
     path('admin/', admin.site.urls),

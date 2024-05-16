@@ -1,4 +1,7 @@
 from django.db import models
+from datetime import date
+from django.contrib.auth.models import User
+
 
 MEALS = (
     ('B', 'Breakfast'),
@@ -19,6 +22,7 @@ class Duck(models.Model):
     description = models.TextField(max_length=250, default='Unknown')
     age = models.IntegerField(default=0)
     ponds = models.ManyToManyField('Pond', related_name='ducks')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
   
     def __str__(self):
       return self.name
